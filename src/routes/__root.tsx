@@ -78,6 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "TiraDefeito Expert | Diagnóstico em Comandos Elétricos" },
+      {
+        name: "description",
+        content:
+          "Aprenda a diagnosticar defeitos em comandos elétricos com investigação guiada, feedback e relatórios. Acesso por 6 meses a R$ 37 ou 12 meses a R$ 67.",
+      },
+      { name: "author", content: "Sandro Nogueira — Academia do Eletricista" },
+      { property: "og:title", content: "TiraDefeito Expert | Diagnóstico em Comandos Elétricos" },
+      {
+        property: "og:description",
+        content:
+          "Treine seu raciocínio com ocorrências simuladas, feedback e relatórios de aprendizagem.",
+      },
       { property: "og:site_name", content: "TiraDefeito Expert" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -86,11 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap",
-      },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,
@@ -101,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
