@@ -78,21 +78,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "TiraDefeito Expert | Diagnóstico em Comandos Elétricos" },
+      {
+        name: "description",
+        content:
+          "Aprenda a diagnosticar defeitos em comandos elétricos com investigação guiada, feedback e relatórios. Acesso por 6 meses a R$ 37 ou 12 meses a R$ 67.",
+      },
+      { name: "author", content: "Sandro Nogueira — Academia do Eletricista" },
+      { property: "og:title", content: "TiraDefeito Expert | Diagnóstico em Comandos Elétricos" },
+      {
+        property: "og:description",
+        content:
+          "Aprenda a diagnosticar defeitos em comandos elétricos com investigação guiada, feedback e relatórios. Acesso por 6 meses a R$ 37 ou 12 meses a R$ 67.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,
@@ -103,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
