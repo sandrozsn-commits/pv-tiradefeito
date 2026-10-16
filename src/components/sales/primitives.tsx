@@ -7,17 +7,7 @@ import { cn } from "@/lib/utils";
 export function Brand() {
   return (
     <a className="brand" href="#inicio" aria-label="TiraDefeito Expert, início">
-      <img
-        className="brand-logo"
-        src="/product-mark.svg"
-        alt="Ícone do TiraDefeito Expert"
-        width="62"
-        height="32"
-      />
-      <span>
-        TiraDefeito <strong>Expert</strong>
-        <small>DIAGNÓSTICO EM COMANDOS ELÉTRICOS</small>
-      </span>
+      <img className="brand-logo" src="/product-logo.svg" alt="TiraDefeito Expert — Diagnóstico em Comandos Elétricos" width="350" height="68" style={{ width: "min(350px, 70vw)", height: "auto", maxHeight: 56, objectFit: "contain" }} />
     </a>
   );
 }
