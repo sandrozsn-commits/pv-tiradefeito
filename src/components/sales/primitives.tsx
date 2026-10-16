@@ -9,8 +9,8 @@ export function Brand() {
     <a className="brand" href="#inicio" aria-label="TiraDefeito Expert, início">
       <img
         className="brand-logo"
-        src="/academia-eletricista-logo.svg"
-        alt="Academia do Eletricista"
+        src="/product-mark.svg"
+        alt="Ícone do TiraDefeito Expert"
         width="62"
         height="32"
       />
