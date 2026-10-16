@@ -1430,3 +1430,85 @@ body {
     border-width: 5px;
   }
 }
+
+/* High-conversion refinements: larger readable type, stronger CTA and offer hierarchy. */
+:root {
+  --cta-glow: 0 14px 34px -12px color-mix(in oklab, var(--primary) 70%, transparent);
+  --card-lift: 0 24px 60px -28px color-mix(in oklab, var(--foreground) 35%, transparent);
+}
+.sales-button {
+  font-weight: 800;
+  box-shadow: var(--cta-glow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.sales-button:not(.sales-button-outline):not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -12px color-mix(in oklab, var(--primary) 85%, transparent);
+}
+.hero {
+  background:
+    radial-gradient(60% 55% at 85% 20%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--muted), var(--background) 70%);
+}
+.hero-subheadline { font-size: 22px; }
+.hero-description { font-size: 17px; }
+.hero-actions .sales-button { min-height: 58px; padding-inline: 30px; font-size: 16px; }
+.hero-actions .text-link, .header-inner nav a { font-size: 14px; }
+.hero-price {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 16px;
+  border: 1px dashed color-mix(in oklab, var(--primary) 60%, transparent);
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--primary) 7%, var(--background));
+}
+.hero-price > span { font-size: 13px; }
+.hero-proof > div { font-size: 14px; font-weight: 600; color: var(--foreground); }
+.hero-proof svg { color: var(--primary); width: 22px; height: 22px; }
+.header-inner .sales-button { font-size: 14px; }
+.step-card {
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 28px;
+  background: var(--background);
+  box-shadow: var(--card-lift);
+}
+.step-number { color: var(--primary); }
+.step-card p { font-size: 16px; }
+.feature-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--card-lift); }
+.plan-card { box-shadow: var(--card-lift); }
+.plan-recommended {
+  border-width: 3px;
+  transform: scale(1.04);
+  box-shadow: 0 30px 70px -30px color-mix(in oklab, var(--primary) 75%, transparent);
+  z-index: 1;
+}
+.plan-badge { font-size: 12px; padding: 9px; }
+.plan-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary); }
+.plan-payment, .plan-equivalent { font-size: 14px; }
+.plan-equivalent > span, .plan-availability { font-size: 12px; }
+.plan-content > .check-list { font-size: 15px; }
+.plan-action .sales-button { min-height: 56px; font-size: 15px; }
+.plan-saving {
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--primary) 14%, var(--background));
+}
+.offer-note { font-size: 14px; }
+.closing {
+  background:
+    radial-gradient(50% 80% at 50% 0%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 70%),
+    var(--ink, var(--foreground));
+}
+.closing .sales-button { min-height: 60px; padding-inline: 34px; font-size: 17px; }
+.mobile-cta { box-shadow: 0 -10px 30px -12px color-mix(in oklab, var(--foreground) 40%, transparent); }
+@media (max-width: 767px) {
+  .plan-recommended { transform: none; }
+  .hero-actions .sales-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sales-button, .feature-card { transition: none; }
+}

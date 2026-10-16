@@ -264,6 +264,9 @@ export function SalesPage() {
               ocorrências de acordo com seu nível e sua disponibilidade.
             </p>
           </div>
+          <div className="section-action">
+            <ActionLink>Quero começar a treinar</ActionLink>
+          </div>
         </Section>
 
         <Section id="para-quem" tone="muted">
@@ -287,6 +290,9 @@ export function SalesPage() {
             <BookOpen aria-hidden="true" />
             Conhecimentos básicos de comandos elétricos ajudam a aproveitar melhor o treinamento.
           </p>
+          <div className="section-action">
+            <ActionLink>Ver os planos de acesso</ActionLink>
+          </div>
         </Section>
 
         <Section id="autoridade" tone="dark">
